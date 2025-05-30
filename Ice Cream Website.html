@@ -807,7 +807,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Scoops & Dreams. All Rights Reserved.</p>
+                <p>&copy; 2025 Scoops & Dreams. All Rights Reserved</p>
             </div>
         </div>
     </footer>
@@ -840,50 +840,6 @@
                 form.reset();
             });
         });
-        
-        // Design Your Own Flavor Preview
-        const customFlavorForm = document.getElementById('custom-flavor-form');
-        if (customFlavorForm) {
-            customFlavorForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Get form values
-                const baseFlavorSelect = document.getElementById('base-flavor');
-                const baseFlavor = baseFlavorSelect.options[baseFlavorSelect.selectedIndex].text;
-                const flavorName = document.getElementById('flavor-name').value;
-                
-                // Get selected mix-ins
-                const mixins = [];
-                document.querySelectorAll('input[name="mixins[]"]:checked').forEach(item => {
-                    mixins.push(item.parentElement.textContent.trim());
-                });
-                
-                // Get topping
-                const toppingSelect = document.getElementById('topping');
-                const topping = toppingSelect.options[toppingSelect.selectedIndex].text;
-                
-                // Create description
-                let description = `"${flavorName}": ${baseFlavor} ice cream`;
-                
-                if (mixins.length > 0) {
-                    description += ` with ${mixins.join(', ')}`;
-                }
-                
-                if (topping && topping !== 'No Topping') {
-                    description += ` topped with ${topping}`;
-                }
-                
-                // Update the preview
-                document.getElementById('flavor-description').textContent = description;
-                document.getElementById('flavor-preview').style.display = 'block';
-                
-                // Scroll to preview
-                document.getElementById('flavor-preview').scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'center'
-                });
-            });
-        }
     </script>
 </body>
 </html>
